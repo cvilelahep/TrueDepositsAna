@@ -16,7 +16,7 @@ rm -rf ${DIRECTORY}
 mkdir ${DIRECTORY}
 cd ${DIRECTORY}
 mrb newDev -q ${COMPILER}:prof
-source /dune/app/users/${USERNAME}/${DIRECTORY}/localProducts*/setup
+source ${WORKDIR}/${DIRECTORY}/localProducts*/setup
 mkdir work
 cd srcs
 mrb g -t $DUNETPC_VERSION dunetpc
