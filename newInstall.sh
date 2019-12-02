@@ -24,6 +24,6 @@ cp ${WORKDIR}/TrueDepositsAnaModule  ${WORKDIR}/srcs/dunetpc/dune/TrueDepositsAn
 echo "add_subdirectory(TrueDepositsAna)" >> ${WORKDIR}/srcs/dunetpc/dune/CMakeLists.txt
 cd $MRB_BUILDDIR
 mrbsetenv
-mrb i -j16
+mrb i
 
 
