@@ -10,6 +10,8 @@ if [ ! -d "$WORKDIR" ]; then
   export WORKDIR=`echo ~`
 fi
 
+echo WORKDIR $WORKDIR
+
 cd ${WORKDIR}
 touch ${DIRECTORY}
 rm -rf ${DIRECTORY}
@@ -20,7 +22,7 @@ source ${WORKDIR}/${DIRECTORY}/localProducts*/setup
 mkdir work
 cd srcs
 mrb g -t $DUNETPC_VERSION dunetpc
-cp ${WORKDIR}/TrueDepositsAnaModule  ${WORKDIR}/${DIRECTORY}/srcs/dunetpc/dune/TrueDepositsAna
+cp -r ${WORKDIR}/TrueDepositsAnaModule  ${WORKDIR}/${DIRECTORY}/srcs/dunetpc/dune/TrueDepositsAna
 echo "add_subdirectory(TrueDepositsAna)" >> ${WORKDIR}/${DIRECTORY}/srcs/dunetpc/dune/CMakeLists.txt
 cd $MRB_BUILDDIR
 mrbsetenv
