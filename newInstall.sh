@@ -20,10 +20,10 @@ source ${WORKDIR}/${DIRECTORY}/localProducts*/setup
 mkdir work
 cd srcs
 mrb g -t $DUNETPC_VERSION dunetpc
-cp ${WORKDIR}/TrueDepositsAnaModule  ${WORKDIR}/srcs/dunetpc/dune/TrueDepositsAna
-echo "add_subdirectory(TrueDepositsAna)" >> ${WORKDIR}/srcs/dunetpc/dune/CMakeLists.txt
+cp ${WORKDIR}/TrueDepositsAnaModule  ${WORKDIR}/${DIRECTORY}/srcs/dunetpc/dune/TrueDepositsAna
+echo "add_subdirectory(TrueDepositsAna)" >> ${WORKDIR}/${DIRECTORY}/srcs/dunetpc/dune/CMakeLists.txt
 cd $MRB_BUILDDIR
 mrbsetenv
-mrb i
+mrb i -j 2
 
 
