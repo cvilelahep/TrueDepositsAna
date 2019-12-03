@@ -9,7 +9,7 @@ fi
 
 cd $WORKDIR/$DIRECTORY
 source localProducts*/setup
-cd work
+# cd work
 mrbslp
 
 
